@@ -133,3 +133,345 @@ import java.util.Scanner;
     }
 
 ```
+
+### 6. Prime Number in Range.
+
+```java
+    import java.util.ArrayList;
+
+public class PrimeInRange {
+    public static boolean isPrime(int i) {
+        if (i <= 1) {
+         return false;
+        }
+        for (int j = 2; j <= Math.sqrt(i); j++) {
+         if (i % j == 0) {
+             return false;
+         }
+        }
+        
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int start = 1, end = 100;
+        ArrayList<Integer> primes = new ArrayList<>();
+
+        for (int i = start; i <= end; i++) {
+            if ( isPrime(i)) {
+                primes.add(i);
+                System.out.println(i);
+            }
+        }
+        System.out.println("Total prime number is"  +  primes.size());
+    }
+}
+```
+
+### 7. Binary to Decimal.
+
+```java
+    public class binaryToDecimal{
+        public static void main(String[] args) {
+            int n = 111;
+            int ans = 0;
+            int i = 0;
+            while(n>0){
+                int bit = n % 10;
+                ans += bit * (int)Math.pow(2,i);
+                n = n / 10;
+                i++;
+            }
+
+            System.out.println(ans);
+        }
+    }
+```
+
+### 8. Decimal to Binary.
+
+```java
+    public class decimalToBinary {
+        public static void main(String[] args) {
+            int n = 7;
+            int[] arr = new int[10];
+            int i = 0;
+            while (n > 0) {
+                arr[i] = n % 2;
+                n = n / 2;
+                i++;
+            }
+            for (int j = i - 1; j >= 0; j--) {
+                System.out.print(arr[j]);
+            }
+        }
+    }
+
+```
+
+### 9. Check if number is palindrome.
+
+```java
+    public class Palindrome {
+        public static boolean isPalindrome(int num){
+            int reverse = 0, temp = num;
+            while(num > 0){
+                reverse = reverse * 10 + num % 10;
+                num = num / 10;
+                }
+                return reverse == temp;
+
+        }
+        public static void main(String[] args) {
+            int num = 121;
+            boolean result = isPalindrome(num);
+            if(result){
+                System.out.println("The number is a palindrome");
+            } else {
+                System.out.println("The number is not a palindrome");
+            }
+        }
+    }
+```
+
+### 10. Triengle Pattern.
+
+```java
+    package Java.pattern;
+
+    class Star {
+        public static void main(String[] args) {
+        for(int i =1; i<=10; i++) {
+            for(int j = 1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        }
+    }
+
+
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *******
+// ********
+// *********
+```
+
+### 11. Inverted Triangle Pattern.
+
+```java
+    package Java.pattern;
+
+    public class InvertedStar {
+        public static void main(String[] args) {
+            for(int i =1; i<=5; i++){
+                for(int j = 5; j>=i; j--){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+// *****
+// ****
+// ***
+// **
+// *
+```
+
+### 12. HollowRectangle Pattern.
+
+```java
+    package Java.pattern;
+
+    public class HollowRectangle {
+        public static void main(String[] args) {
+            int n = 10;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n; j++) {
+                    if (i == 1 || i == n || j == 1 || j == n){
+                        System.out.print(" * ");
+                    }
+
+                    else {
+                        System.out.print("   ");
+                        
+                    }
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+// *  *  *  *  *  *  *  *  *  * 
+// *                          * 
+// *                          * 
+// *                          * 
+// *                          * 
+// *                          * 
+// *                          * 
+// *                          * 
+// *                          * 
+// *  *  *  *  *  *  *  *  *  * 
+```
+
+### 13. InSideHollowCross Pattern.
+
+```java
+    package Java.pattern;
+
+    public class InSideHollowCross {
+        public static void main(String[] args) {
+            int n = 15;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n; j++) {
+                    if (i == 1 || i == n || j == 1 || j == n) {
+                        System.out.print(" * ");
+                    } else if (i == j || i + j == n + 1) {
+                        System.out.print(" * ");
+                    } else {
+                        System.out.print("   ");
+                    }
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+
+// *  *  *  *  *  *  *  *  *  *  *  *  *  *  * 
+// *  *                                   *  *
+// *     *                             *     *
+// *        *                       *        *
+// *           *                 *           *
+// *              *           *              *
+// *                 *     *                 *
+// *                    *                    *
+// *                 *     *                 *
+// *              *           *              * 
+// *           *                 *           *
+// *        *                       *        *
+// *     *                             *     *
+// *  *                                   *  *
+// *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+```
+
+### 14. InSideHollowRect Pattern.
+
+```java
+    package Java.pattern;
+
+    public class InsideHollowRect {
+        public static void main(String[] args) {
+            int n = 15; 
+            int middleStart = 5; 
+            int middleEnd = n - 4; 
+            int innerStart = 7; 
+            int innerEnd = n - 6; 
+
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n; j++) {
+                    // Conditions for the outermost rectangle
+                    if (i == 1 || i == n || j == 1 || j == n ||
+                        // Conditions for the middle rectangle
+                        (i == middleStart && j >= middleStart && j <= middleEnd) ||
+                        (i == middleEnd && j >= middleStart && j <= middleEnd) ||
+                        (j == middleStart && i >= middleStart && i <= middleEnd) ||
+                        (j == middleEnd && i >= middleStart && i <= middleEnd) ||
+                        // Conditions for the innermost rectangle
+                        (i == innerStart && j >= innerStart && j <= innerEnd) ||
+                        (i == innerEnd && j >= innerStart && j <= innerEnd) ||
+                        (j == innerStart && i >= innerStart && i <= innerEnd) ||
+                        (j == innerEnd && i >= innerStart && i <= innerEnd)) {
+                        System.out.print("* ");
+                    } else {
+                        System.out.print("  ");
+                    }
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+
+// * * * * * * * * * * * * * * * 
+// *                           *
+// *                           *
+// *                           *
+// *       * * * * * * *       *
+// *       *           *       *
+// *       *   * * *   *       * 
+// *       *   *   *   *       *
+// *       *   * * *   *       *
+// *       *           *       *
+// *       * * * * * * *       *
+// *                           *
+// *                           *
+// *                           *
+// * * * * * * * * * * * * * * *
+```
+
+### 15. HalfPyramid Using Number.
+
+```java
+    package Java.pattern;
+
+    public class HalfPyramid {
+        public static void main(String[] args) {
+            int n = 5;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= i; j++) {
+                    System.out.print(j);
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+// 1
+// 12
+// 123
+// 1234
+// 12345
+
+```
+
+### 16. RotatedHalfPyramid.
+
+```java
+    package Java.pattern;
+
+    public class RotatedHalfPyramid {
+        public static void main(String[] args) {
+            int n = 5;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n - i; j++) {
+                    System.out.print("  ");
+                }
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+        }
+    }
+
+//         * 
+//       * * 
+//     * * * 
+//   * * * * 
+// * * * * * 
+```
+
+### 17. 
