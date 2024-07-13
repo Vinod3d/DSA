@@ -474,4 +474,133 @@ public class PrimeInRange {
 // * * * * * 
 ```
 
-### 17. 
+### 17. Inverted Half Pyramid with Number.
+
+```java
+    public class InvertHalfPyramidNum{
+        public static void main(String[] args) {
+            int n = 5;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n + 1 -i; j++) {
+                    System.out.print(j + " ");
+                }
+                System.out.println();
+            }    
+        }
+    }
+
+
+    // 1 2 3 4 5 
+    // 1 2 3 4
+    // 1 2 3
+    // 1 2
+    // 1
+```
+
+### 18. Floyd's Triangle
+
+```java
+    public class FloydsTriangle {
+        public static void main(String[] args) {
+            int n = 5;
+            int i, j, k = 1;
+            for (i = 1; i <= n; i++) {
+                for (j = 1; j <= i; j++) {
+                    System.out.print(k + " ");
+                    k++;
+                }
+                System.out.println();
+            }
+
+        }
+    }
+
+    // 1 
+    // 2 3
+    // 4 5 6
+    // 7 8 9 10
+    // 11 12 13 14 15
+```
+
+### 19. 01 Triangle Pattern.
+
+```java
+    public class Triangle_01 {
+        public static void main(String[] args) {
+            int n = 5;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= i; j++) {
+                    if((i+j) % 2 == 0){
+                        System.out.print("1");
+                    } else{
+                        System.out.print("0");
+                    }
+                    
+                }
+                System.out.println();
+            }
+        }
+    }
+
+    // 1
+    // 01
+    // 101
+    // 0101
+    // 10101
+```
+
+### 20. Butterfly Pattern.
+
+```java
+    public class ButterflyPattern {
+        public static void main(String[] args) {
+            int n = 5;
+            for (int i = 1; i <= n; i++) {
+                // Left side triangle
+                for (int j = 1; j <= i; j++) { 
+                    System.out.print("* ");
+                }
+                // Print Spaces
+                for (int j = 1 ; j <= (n - i) * 2; j++) {
+                    System.out.print("  ");
+                }
+
+                // right Side Triangle
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+
+
+            for (int i = n; i >=1; i--) {
+                // Lower Left side triangle
+                for (int j = 1; j <= i; j++) { 
+                    System.out.print("* ");
+                }
+                // Print Spaces
+                for (int j = 1 ; j <= (n - i) * 2; j++) {
+                    System.out.print("  ");
+                }
+
+                // Lower right Side Triangle
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+    // *                 * 
+    // * *             * *
+    // * * *         * * *
+    // * * * *     * * * *
+    // * * * * * * * * * *
+    // * * * * * * * * * *
+    // * * * *     * * * *
+    // * * *         * * *
+    // * *             * *
+    // *                 *
+```

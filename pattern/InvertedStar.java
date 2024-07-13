@@ -1,4 +1,3 @@
-package Java.pattern;
 
 public class InvertedStar {
     public static void main(String[] args) {
