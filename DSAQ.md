@@ -604,3 +604,128 @@ public class PrimeInRange {
     // * *             * *
     // *                 *
 ```
+
+### 21. Solid Rhombus Pattern.
+
+```java
+    public class SolidRhombus {
+        public static void main(String[] args) {
+            int n = 5;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n-i; j++) {
+                    System.out.print("  ");
+                }
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("* ");
+                }
+                for (int j = 1; j <= n-i; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+    //     * * * * * 
+    //    * * * * *
+    //   * * * * *
+    //  * * * * *
+    // * * * * *
+```
+
+### 22. Hollow Rhombus Pattern.
+
+```java
+    public class HollowRhombus {
+        public static void main(String[] args) {
+            int n = 5;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n -i; j++) {
+                    System.out.print(" ");
+                }
+                for (int j = 1; j <= n; j++) {
+                    if (i == 1 || i == n || j == 1 || j == n){
+                        System.out.print("* ");
+                    }
+                    else {
+                        System.out.print("  ");
+                    }
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+    //         * * * * * 
+    //       *       *
+    //     *       *
+    //   *       *
+    // * * * * *`
+```
+
+### 23. Diamond Pattern.
+
+```java
+    public class DiamondPattern {
+        public static void main(String[] args) {
+            int n = 5;
+            // UP Side
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n - i; j++) {
+                    System.out.print("  ");
+                }
+                for (int j = 1; j <= 2* i-1; j++){
+                    System.out.print(" *");
+                }
+                System.out.println();
+            }
+
+            // DOWN Side
+            for (int i = n; i >= 1; i--) {
+                for (int j = 1; j <= n - i; j++) {
+                    System.out.print("  ");
+                }
+                for (int j = 1; j <= 2* i-1; j++){
+                    System.out.print(" *");
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+    //   *
+    // * * *
+    //   *
+
+```
+
+### 24. Number Pyramid.
+
+```java
+    public class NumberPyramid {
+        public static void main(String[] args) {
+            int n = 5;
+            int count = 1;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n- i; j++) {
+                    System.out.print(" ");
+                }
+                for (int j = 1; j <= i; j++) {
+                    System.out.print(count + " ");
+                }
+                count++;
+                System.out.println();
+            }
+        }
+    }
+
+
+    //     1 
+    //    2 2
+    //   3 3 3
+    //  4 4 4 4
+    // 5 5 5 5 5
+```
