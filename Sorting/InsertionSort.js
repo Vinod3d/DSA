@@ -8,6 +8,7 @@ function InsertionSort(){
             arr[prev + 1] = arr[prev];
             prev--
         }
+        console.log(prev)
         arr[prev + 1] = curr;
     }
     console.log(arr)

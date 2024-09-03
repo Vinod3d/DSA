@@ -4,41 +4,57 @@
 
 Bubble sort is a simple comparison-based sorting algorithm. It works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order. This process is repeated until the list is sorted.
 
+[sorce video link](https://www.youtube.com/watch?v=o4bAoo_gFBU&list=PLuZ_bd9XlByzTIP5j1aWXo7smCIxvzd2D)
+
 ```js
-    function BubbleSort(){
-        let arr = [64, 34, 25, 12, 22, 77]
-        let n = arr.length;
-        for (let i = 0; i < n; i++) {
-            for (let j = 0; j < n - i - 1; j++) {
+    function BubbleSort() {
+    let arr = [5, 7, 8, 1, 3, 2];
+    let n = arr.length;
+    let flag;
+
+    for (let i = 0; i < n - 1; i++) {
+        flag = 0;
+        for (let j = 0; j < n - 1 - i; j++) {
             if (arr[j] > arr[j + 1]) {
+                // Swap elements
                 [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-            }
+                flag = 1;  // Set flag to 1 if a swap occurred
             }
         }
-        console.log(arr);
+        // If no swaps occurred, array is sorted, break the loop
+        if (flag == 0) {
+            break;
+        }
     }
+    console.log(arr);
+}
 
-    BubbleSort();
+BubbleSort();
+
 ```
 
 ### 2. Selection Sort.
 
 Selection sort is a simple and intuitive comparison-based sorting algorithm. It works by repeatedly selecting the smallest (or largest, depending on the sorting order) element from the unsorted portion of the list and moving it to the beginning (or end) of the sorted portion.
 
+[source](https://www.youtube.com/watch?v=9oWd4VJOwr0&list=PLuZ_bd9XlByzTIP5j1aWXo7smCIxvzd2D&index=3)
+
 ```js
-    function SelectionSort(){
-        let arr = [64, 34, 25, 12, 22, 18, 9]
+function SelectionSort(){
+    let arr = [64, 34, 25, 12, 22, 18, 9]
         let n = arr.length;
-        for (let i = 0; i < n; i++) {
+        for (let i = 0; i < n-1; i++) {
             let min_idx = i;
             for (let j = i + 1; j < n; j++) {
                 if (arr[min_idx] > arr[j]) {
                     min_idx = j;
                 }
             }
-            let temp = arr[i];
-            arr[i] = arr[min_idx];
-            arr[min_idx] = temp;
+            // let temp = arr[i];
+            // arr[i] = arr[min_idx];
+            // arr[min_idx] = temp;
+
+            [arr[min_idx], arr[i]] = [arr[i], arr[min_idx]]
         }
         console.log(arr)
     }
