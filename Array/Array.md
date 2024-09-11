@@ -321,3 +321,426 @@ SumOfSubArray();
 
     BuyAndSellStocke();
 ```
+
+### 13. Second Largest Number in Array.
+
+```js
+    function findSecondLargest(arr) {
+        if(arr.length < 2){
+            return null;
+        }
+
+        let largest = -Infinity;
+        let secondLargest = -Infinity;
+
+        for(let i = 0; i< arr.length; i++){
+            if(arr[i] > largest){
+                secondLargest = largest;
+                largest = arr[i];
+            }else if (arr[i] > secondLargest && arr[i] < largest) {
+                secondLargest = arr[i];
+            }
+        }
+
+        if (secondLargest === -Infinity) {
+            return null;
+        }
+
+        return secondLargest;
+    }
+
+    const numbers = [10, 5, 8, 20, 15];
+    const result = findSecondLargest(numbers);
+    console.log(`The second largest number is ${result}`);
+```
+
+### 14. Calculate Average of Array;
+
+```js
+    function calculatAverage(){
+        const arr = [5, 8, 22, 12, 18];
+        let total;
+        const average = arr.reduce((acc, cur)=>{
+        return total  = acc + cur;
+        }, 0)
+
+        return total/arr.length
+    };
+
+    console.log(
+        calculatAverage()
+    )
+```
+
+### 15. is Array are Equal.
+
+```js
+    function arrayAreEqual() {
+    const arr = [5, 8, 22, 12, 18];
+    const arr2 = [5, 22, 8, 12, 18];
+
+    if (arr.length !== arr2.length) {
+        return false;
+    }
+
+    const sortedArr = arr.slice().sort((a, b) => a - b);
+    const sortedArr2 = arr2.slice().sort((a, b) => a - b);
+
+    // for (let i = 0; i < sortedArr.length; i++) {
+    //     if (sortedArr[i] !== sortedArr2[i]) {
+    //         return false;
+    //     }
+    // }
+
+    return sortedArr.every((curVal, index)=> curVal === sortedArr2[index])
+
+    
+}
+
+console.log(arrayAreEqual());
+```
+
+
+### 16. sum of digits.
+
+```js
+    function sumOfDigits(){
+    let num = 49039;
+    let arr = Array.from(String(num));
+    let sum = arr.reduce((accu, cur)=> {
+        return accu += parseInt(cur);
+    },0);
+    return sum
+}
+
+console.log(
+    sumOfDigits()
+)
+```
+
+```js
+    function sumOfDigits() {
+        let num = 49039;
+        let sum = 0;
+
+        while (num > 0) {
+            let lastDigit = num % 10;
+            sum += lastDigit;
+            num = Math.floor(num / 10);
+        }
+
+        return sum;
+    }
+
+    console.log(sumOfDigits());
+```
+
+### 17. Remove Duplicate from array.
+
+```js
+    function removeDuplicates(arr) {
+        return arr.filter((value, index, self) => self.indexOf(value) === index);
+    }
+
+    const numbers = [1, 2, 3, 2, 4, 5, 4, 6, 7, 5];
+    const uniqueNumbers = removeDuplicates(numbers);
+
+    console.log(uniqueNumbers); 
+    // Output: [1, 2, 3, 4, 5, 6, 7]
+
+```
+
+```js
+    function removeDuplicates(arr) {
+        let uniq = new Set(arr);
+        return [...uniq];
+    }
+
+    const numbers = [1, 2, 3, 2, 4, 5, 4, 6, 7, 5];
+    const uniqueNumbers = removeDuplicates(numbers);
+
+    console.log(uniqueNumbers); 
+    // Output: [1, 2, 3, 4, 5, 6, 7]
+```
+
+### 18. Sum of Square.
+
+```js
+    function sumOfSquares(){
+        const arr = [5, 4, 2, 1];
+        const sum = arr.reduce((accu, curr)=>accu+= (curr*curr),0)
+        return sum;
+    }
+
+
+    console.log(
+        sumOfSquares()
+    )
+```
+
+### 19. find min value in array.
+
+```js
+    function findMin(){
+    const arr = [4, 12, 4, 1, -5, -2];
+    let min = Infinity;
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i]< min){
+            min = arr[i];
+        }
+    }
+
+    return min;
+}
+
+console.log(
+    findMin()
+)
+```
+
+### 20. find median value.
+```js
+    function findMedian(){
+    const arr = [3, 3, 5, 9, 15];
+    let res  = arr.length % 2 !== 0 ? "odd" : 'even';
+    let val = ""
+    if(res== 'odd'){
+        mid = Math.ceil(arr.length / 2);
+        return val = arr[mid - 1];
+    } else if(res == 'even') {
+        mid = arr.length/2;
+        return val = (arr[mid - 1] + arr[mid]) / 2;
+    }
+
+    return val
+}
+
+
+console.log(
+    findMedian()
+)
+```
+
+### 21. Count Accurence element in array.
+```js
+    // Method 1
+
+// function countAccurence(){
+//     let arr = [1, 2, 2, 3, 1, 4, 2];
+//     let objKey = [...new Set(arr)];
+    
+//     let countObj = objKey.reduce((acc, curr) => {
+//         acc[curr] = 0
+//         return acc;
+//     }, {})
+    
+//     for(let i = 0; i< arr.length; i++){
+//         countObj[arr[i]] += 1;
+//     }
+//     return countObj
+// }
+
+
+// console.log(
+//     countAccurence()
+// )
+
+// Method 2
+
+function countAccurence(){
+    let arr = [1, 2, 2, 3, 1, 4, 2];
+    let counts = {};
+
+    for(let elements of arr){
+        counts[elements] = (counts[elements] || 0) + 1;
+    }
+
+    return counts;
+}
+
+console.log(
+    countAccurence()
+)
+
+```
+
+### 22. find mode in array.
+```js
+    function findMode(){
+    let arr = [1, 2, 2, 3, 1, 4, 2, 1, 1, 1, 4,4,4,4,4,  ]
+    let counts = {};
+    let maxCount = 0;
+    let mode;
+
+    for(let element of arr){
+        counts[element] = (counts[element] || 0) + 1;
+        if(counts[element] > maxCount){
+             maxCount = counts[element]
+             mode = element
+        }
+    }
+    return mode
+}
+
+
+console.log(
+    findMode()
+)
+```
+
+
+### 23. add item in end of array.
+
+```js
+    function addItemEnd(){
+    let arr = [1, 2, 3, 4];
+    arr[arr.length] = 5;
+    return arr
+}
+
+
+console.log(
+    addItemEnd()
+)
+```
+
+
+### 24. add item in start of array.
+```js
+    function addItemStart(){
+    let arr = [1, 2, 3, 4]
+    for(let i = arr.length; i>0; i--){
+        arr[i] = arr[i-1]
+    }
+    arr[0] = 5
+    return arr
+
+}
+
+console.log(
+    addItemStart()
+)
+```
+
+### 25. number range.
+
+```js
+    function numberRange(start, end){
+        let arr = []
+        let length = (end + 1) - (start +1)
+        for(let i = 0; i<= length; i++){
+            arr[i] = start;
+            start++
+        }
+
+        return arr
+    }
+
+    console.log(
+        numberRange(12, 20)
+    )
+```
+
+### 26. delete last element.
+```js
+    let arr = [1, 2, 3, 4, 5];
+
+    function deleteLastElement(array) {
+        if (array.length > 0) {
+            array.length = array.length - 1; 
+        }
+    }
+
+    console.log("Before:", arr);
+
+    deleteLastElement(arr);
+
+    console.log("After:", arr);
+```
+
+
+### 27. delete first element.
+```js
+    let arr = [1, 2, 3, 4, 5];
+
+function deleteFirstElement(array) {
+    for (let i = 0; i < array.length - 1; i++) {
+        array[i] = array[i + 1];
+    }
+    array.length = array.length - 1;
+}
+
+console.log("Before:", arr);
+deleteFirstElement(arr);
+console.log("After:", arr);
+
+```
+
+
+### 28. number Range Recursive.
+```js
+    let arr =[]
+    function numberRangeRecursive(start, end){
+        if(start <= end){
+            arr.push(start);
+            return numberRangeRecursive(start + 1, end )
+        }
+
+        return arr
+    }
+
+
+    console.log(
+        numberRangeRecursive(0, 5)
+    )
+```
+
+### Password Validation.
+
+```js
+    // function simplePasswordValidator(){
+//     let password = 'Vinod123#$'
+//     let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#!%*?&])[A-Za-z\d#@$!%*?&]{8,}$/;
+//     if (password.match(passwordRegex)) {
+//         return true
+//     } else{
+//         return false
+//     }
+// }
+
+
+
+function simplePasswordValidator(){
+    let password = 'Vinod1253';
+    let hasLowerCase = false;
+    let hasUpperCase = false;
+    let hasNumber = false;
+
+    for(let char of password){
+        if (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90) {
+            hasUpperCase = true;  // Check for uppercase letter
+        } 
+
+        else if (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) {
+            hasLowerCase = true;  // Check for lowercase letter
+        }
+
+        else if (!isNaN(Number(char))) {
+            hasNumber = true;  // Check for digit
+        }
+    }
+
+    if (hasLowerCase && hasUpperCase && hasNumber && password.length >= 8) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+console.log(
+    simplePasswordValidator()
+)
+
+
+```

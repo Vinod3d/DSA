@@ -92,6 +92,20 @@ even and odd integers.
 
 ```
 
+```js
+    function factorial(n) {
+        if (n === 0 || n === 1) {
+            return 1;
+        }
+        
+        return n * factorial(n - 1);
+    }
+
+    const number = 5;
+    const result = factorial(number);
+    console.log(`The factorial of ${number} is ${result}`);
+```
+
 ### 4. Write a program to print the multiplication table of a number N, entered by the
 user.
 
