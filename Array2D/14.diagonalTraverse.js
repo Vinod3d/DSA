@@ -9,6 +9,7 @@ function findDiagonalOrder(matrix){
         result.push(matrix[row][col]);
 
         if(directionUp){
+
             if(col === n - 1){
                 row++;
                 directionUp = false;
@@ -17,9 +18,10 @@ function findDiagonalOrder(matrix){
                 col++;
                 directionUp = false;
             } 
+
             else{
                 row--;
-                col++
+                col++;
             }
         } 
         else{
@@ -31,11 +33,12 @@ function findDiagonalOrder(matrix){
                 row++;
                 directionUp = true;
             }
-            else{
-                row++;
-                col--
-            }
 
+            else{
+
+                row++;
+                col--;
+            }
         }
     }
 

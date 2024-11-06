@@ -307,3 +307,118 @@ const generateBarChart = (arr) =>{
       generateBarChart([5, 3, 9, 2])
   )
 ```
+
+### 15. Shortest path.
+
+```js
+  function getShortestPath(path){
+    let x = 0, y = 0;
+    for(let i = 0; i<path.length; i++){
+        let dir = path.charAt(i);
+        if(dir == 'S'){
+            y--;
+        }
+        else if(dir == 'N'){
+            y++;
+        }
+        else if(dir == 'E'){
+            x++;
+        }
+        else if(dir == 'W'){
+            x--;
+        }
+    }
+
+    let x2 = x*x;
+    let y2 = y*y;
+    let dist = Math.sqrt(x2 + y2);
+    return dist;
+}
+
+const path = "WNEENESENNN";
+console.log(getShortestPath(path))
+```
+
+### 16. Substring.
+
+```js
+  function getSubString(str, s, e){
+      let subStr = "";
+      for(let i =s; i<e; i++ ){
+          subStr += str.charAt(i);
+      }
+      return subStr;
+  }
+
+  console.log(getSubString('HelloWorld', 2, 6));
+```
+
+### 17. get Largest Lexicographical String.
+
+```js
+  function getLargestLexicographicalString(strings) {
+      strings.sort((a, b) => b.localeCompare(a));
+      return strings[0];
+  }
+
+  const strings = ["apple", "banana", "orange", "mango"];
+  const largestString = getLargestLexicographicalString(strings);
+  console.log("Largest Lexicographical String:", largestString);
+```
+
+### 18. String builder.
+
+```js
+  class StringBuilder {
+    constructor() {
+        this.strings = [];
+    }
+
+    append(value) {
+        this.strings.push(value);
+        return this; // Allows method chaining
+    }
+
+    toString() {
+        return this.strings.join('');
+    }
+
+    clear() {
+        this.strings = [];
+    }
+}
+
+// Example usage:
+const sb = new StringBuilder();
+sb.append('Hello, ')
+  .append('World!')
+  .append(' How are you?');
+
+console.log(sb.toString()); // Output: "Hello, World! How are you?"
+
+```
+
+### 19. String Compression.
+
+```js
+  function stringCompression(str){
+    let newStr = "";
+      for(let i = 0; i<str.length; i++){
+          let count = 1;
+          while(i<str.length - 1 && str.charAt(i) == str.charAt(i + 1)){
+              count++;
+              i++
+          }
+          newStr += str.charAt(i);
+          if(count > 1){
+              newStr += count.toString();
+          }
+
+      }
+      return newStr;
+
+  }
+
+  const str = "aaabbccccddd"
+  console.log(stringCompression(str))
+```

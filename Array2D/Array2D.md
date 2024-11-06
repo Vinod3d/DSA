@@ -280,3 +280,197 @@ rotateMatrix(matrix);
 console.log("Matrix rotated 90 degrees clockwise:");
 matrix.forEach((row) => console.log(row));
 ```
+### 4.8. Search Sorted Array.
+
+```js
+  function searchSortedMatrix(matrix, target ){
+    let rows = matrix.length;
+    let cols = matrix[0].length;
+
+    // start from top right corner
+
+
+    let row = 0;
+    let col = cols - 1;
+
+    while(row < rows && col >= 0){
+        if(matrix[row][col] === target) {
+            return [row, col];
+        }
+
+        else if(target < matrix[row][col]){
+            col--;
+        }
+        else{
+            row++
+        }
+    }
+
+}
+
+let matrix = [
+    [1, 4, 7, 11, 15],
+    [2, 5, 8, 12, 19],
+    [3, 6, 9, 16, 22],
+    [10, 13, 14, 17, 24],
+    [18, 21, 23, 26, 30]
+  ];
+  
+  let target = 14;
+  console.log(searchSortedMatrix(matrix, target));
+```
+
+### 4.9. Spiral Element
+
+```js
+  function spiralOrder(matrix) {
+    const result = [];
+    if (matrix.length === 0) return result;
+  
+    let startRow = 0;
+    let startColumn = 0;
+    let endRow = matrix.length - 1;
+    let endColumn = matrix[0].length - 1;
+  
+    while (startRow <= endRow && startColumn <= endColumn) {
+      for (let i = startColumn; i <= endColumn; i++) {
+        result.push(matrix[startRow][i]);
+      }
+      startRow++;
+  
+      for (let i = startRow; i <= endRow; i++) {
+        result.push(matrix[i][endColumn]);
+      }
+      endColumn--;
+  
+      for (let i = endColumn; i >= startColumn; i--) {
+        result.push(matrix[endRow][i]);
+      }
+      endRow--;
+  
+      for (let i = endRow; i >= startRow; i--) {
+        result.push(matrix[i][startColumn]);
+      }
+      startColumn++;
+    }
+    return result;
+  }
+  
+  const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ];
+  
+  console.log("Spiral Order Traversal:");
+  console.log(spiralOrder(matrix));
+  
+```
+
+### 4.10 Sum of second Row
+
+```js
+  
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+let secondRow = matrix[1];
+
+let sum = secondRow.reduce((acc, num) => acc + num, 0);
+
+console.log("The sum of the second row is:", sum);
+
+```
+
+### 4.11 keboard number matrix
+
+```js
+  function keyNum() {
+    const row = 4; // Number of rows
+    const col = 2; // Number of columns
+    let result = [];
+    let num = 9;   // Start with 9 to fit the desired pattern
+
+    for (let i = 0; i < row; i++) {
+        result[i] = []; // Initialize the row
+        for (let k = col; k >=0; k--) {
+            if(num>=0){
+
+                result[i][k] = num;
+                num--;
+            } else{
+                result[i][k] = '';
+            }
+        }
+    }
+
+    for (let i = 0; i < row; i++) {
+        console.log(result[i].join(' '));
+    }
+}
+
+keyNum();
+
+```
+
+### 4.12 find Diagonal order of matrix.
+
+```js
+  function findDiagonalOrder(matrix){
+    const m = matrix.length;
+    const n = matrix[0].length;
+    const result = [];
+    let directionUp = true;
+    let row = 0, col = 0;
+
+    while(result.length < m*n){
+        result.push(matrix[row][col]);
+
+        if(directionUp){
+
+            if(col === n - 1){
+                row++;
+                directionUp = false;
+            }
+            else if(row === 0){
+                col++;
+                directionUp = false;
+            } 
+
+            else{
+                row--;
+                col++;
+            }
+        } 
+        else{
+            if(row === m - 1){
+                col++;
+                directionUp = true;
+            }
+            else if(col === 0){
+                row++;
+                directionUp = true;
+            }
+
+            else{
+
+                row++;
+                col--;
+            }
+        }
+    }
+
+    return result;
+}
+
+const mat = [ 
+    [1, 2, 3],
+    [4, 5, 6], 
+    [7, 8, 9]
+]
+
+console.log(findDiagonalOrder(mat));
+```

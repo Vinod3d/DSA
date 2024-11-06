@@ -682,66 +682,105 @@ public class PrimeInRange {
 ### 23. Diamond Pattern.
 
 ```java
-    public class DiamondPattern {
-        public static void main(String[] args) {
-            int n = 5;
-            // UP Side
-            for (int i = 1; i <= n; i++) {
-                for (int j = 1; j <= n - i; j++) {
-                    System.out.print("  ");
-                }
-                for (int j = 1; j <= 2* i-1; j++){
-                    System.out.print(" *");
-                }
-                System.out.println();
-            }
+    function printDiamondPattern(n) {
+        // UP Side
+    for(let i = 1; i<=n; i++){
+        let row = '';
 
-            // DOWN Side
-            for (int i = n; i >= 1; i--) {
-                for (int j = 1; j <= n - i; j++) {
-                    System.out.print("  ");
-                }
-                for (int j = 1; j <= 2* i-1; j++){
-                    System.out.print(" *");
-                }
-                System.out.println();
-            }
+        // Print Leading space
+        for(let j = 1; j<=n-i; j++){
+            row+= '  ';
         }
+
+        for(let j=1; j<=2*i-1; j++){
+            row += ' *';
+        }
+        console.log(row);
     }
 
+    // DOWN Side
+    for(let i = n-1; i>=1; i--){
+        let row = '';
+        // Print Leading space
+        for(let j = 1; j<=n-i; j++){
+            row += '  ';
+        }
 
-    //   *
-    // * * *
-    //   *
+        for(let j = 1; j<=2*i - 1; j++){
+            row += ' *'
+        }
+        console.log(row)
+    }
+  
+  }
+  
 
+  printDiamondPattern(5);
+
+/*
+         *
+       * * *
+     * * * * *
+   * * * * * * *
+ * * * * * * * * *
+   * * * * * * *
+     * * * * *
+       * * *
+         *
+*/
 ```
 
 ### 24. Number Pyramid.
 
 ```java
-    public class NumberPyramid {
-        public static void main(String[] args) {
-            int n = 5;
-            int count = 1;
-            for (int i = 1; i <= n; i++) {
-                for (int j = 1; j <= n- i; j++) {
-                    System.out.print(" ");
-                }
-                for (int j = 1; j <= i; j++) {
-                    System.out.print(count + " ");
-                }
-                count++;
-                System.out.println();
-            }
+function numberDiamond(n){
+    let count = 1;
+    for(let i = 1; i<=n; i++){
+        let row = '';
+        for(let j= 1; j<=n-i; j++){
+            row += '  ';
         }
+        for(let j =1; j<=2*i-1; j++){
+            row += count + ' '
+
+        }
+        count++;
+        console.log(row)
     }
 
+    for (let i = n - 1; i >= 1; i--) {
+        let row = '';
+    
+        // Print leading spaces
+        for (let j = 1; j <= n - i; j++) {
+          row += '  ';
+        }
+    
+        // Print numbers
+        for (let j = 1; j <= 2 * i - 1; j++) {
+          row += count + ' ';
+        }
+    
+        count++;
+        console.log(row);
+      }
 
-    //     1 
-    //    2 2
-    //   3 3 3
-    //  4 4 4 4
-    // 5 5 5 5 5
+}
+
+numberDiamond(5)
+
+/*
+        1 
+      2 2 2
+    3 3 3 3 3
+  4 4 4 4 4 4 4
+5 5 5 5 5 5 5 5 5
+  6 6 6 6 6 6 6
+    7 7 7 7 7
+      8 8 8
+        9
+
+        */
 ```
 
 ### 25. Palindromic Pattern.
@@ -771,4 +810,31 @@ public class PrimeInRange {
 //   4 3 2 1 2 3 4 
 // 5 4 3 2 1 2 3 4 5
 
+```
+
+### 26. Half Diamond.
+
+```js
+    package Java.pattern;
+
+    public class halfDiamond {
+
+        public static void main(String[] args) {
+            int n = 5;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("* ");
+                }
+
+                System.out.println();
+            }
+
+            for(int k = 1; k<=n; k++ ){
+                for(int l = n; l>=k; l--){
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+        }
+    }
 ```
