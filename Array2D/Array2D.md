@@ -79,27 +79,25 @@ Swapping rows with columns.
 
 ```js
 function transpose(matrix) {
-  let transposed = [];
+    const n = matrix.length;
 
-  for (let i = 0; i < matrix.length; i++) {
-    transposed[i] = [];
-    for (let j = 0; j < matrix[i].length; j++) {
-      (transposed[i][j] = matrix[j][i]), "\n";
+    for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+            [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
+        }
     }
-  }
-
-  return transposed;
 }
 
 const matrix = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
 ];
 
-const transposedMatrix = transpose(matrix);
+transpose(matrix);
+console.log("Transposed Matrix:");
+matrix.forEach(row => console.log(row));
 
-transposedMatrix.forEach((row) => console.log(row));
 
 // [ 1, 4, 7 ]
 // [ 2, 5, 8 ]

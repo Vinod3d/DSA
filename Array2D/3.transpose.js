@@ -1,23 +1,19 @@
+function transpose(matrix) {
+    const n = matrix.length;
 
-function transpose(matrix){
-    let transposed = [];
-
-    for (let i = 0; i< matrix.length; i ++){
-        transposed[i] = [];
-        for(let j = 0; j< matrix[i].length; j++){
-            transposed[i][j] = matrix[j][i] , '\n';
+    for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+            [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
         }
     }
-
-    return transposed;
 }
 
 const matrix = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
 ];
 
-const transposedMatrix = transpose(matrix);
-
-transposedMatrix.forEach(row => console.log(row));
+transpose(matrix);
+console.log("Transposed Matrix:");
+matrix.forEach(row => console.log(row));
