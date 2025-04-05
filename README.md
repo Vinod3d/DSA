@@ -1,273 +1,648 @@
-<!-- TOC -->
+# String
 
-| No. | Topic                                                                                                                                                                |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | [Check if A Number if prime or not.](#1-check-if-a-number-if-prime-or-not)                                                                                           |
-| 2   | [Write a program that reads a set of integers, and then prints the sum of the](#2-write-a-program-that-reads-a-set-of-integers,-and-then-prints-the-sum-of-th)       |
-| 3   | [Write a program to find the factorial of any number entered by the user.](#3-write-a-program-to-find-the-factorial-of-any-number-entered-by-the-user)               |
-| 4   | [Write a program to print the multiplication table of a number N, entered by the](#4-write-a-program-to-print-the-multiplication-table-of-a-number-n,-entered-by-th) |
-| 5   | [Swap Number without using third variable.](#5-swap-number-without-using-third-variable)                                                                             |
-| 6   | [Prime Number in Range.](#6-prime-number-in-range)                                                                                                                   |
-| 7   | [Binary to Decimal.](#7-binary-to-decimal)                                                                                                                           |
-| 8   | [Decimal to Binary.](#8-decimal-to-binary)                                                                                                                           |
-| 9   | [Check if number is palindrome.](#9-check-if-number-is-palindrome)                                                                                                   |
-| 10  | [Triengle Pattern.](#10-triengle-pattern)                                                                                                                            |
-| 11  | [Inverted Triangle Pattern.](#11-inverted-triangle-pattern)                                                                                                          |
-| 12  | [HollowRectangle Pattern.](#12-hollowrectangle-pattern)                                                                                                              |
-| 13  | [InSideHollowCross Pattern.](#13-insidehollowcross-pattern)                                                                                                          |
-| 14  | [InSideHollowRect Pattern.](#14-insidehollowrect-pattern)                                                                                                            |
-| 15  | [HalfPyramid Using Number.](#15-halfpyramid-using-number)                                                                                                            |
-| 16  | [RotatedHalfPyramid.](#16-rotatedhalfpyramid)                                                                                                                        |
-| 17  | [Inverted Half Pyramid with Number.](#17-inverted-half-pyramid-with-number)                                                                                          |
-| 18  | [Floyd's Triangle](#18-floyd's-triangl)                                                                                                                              |
-| 19  | [01 Triangle Pattern.](#19-01-triangle-pattern)                                                                                                                      |
-| 20  | [Butterfly Pattern.](#20-butterfly-pattern)                                                                                                                          |
-| 21  | [Solid Rhombus Pattern.](#21-solid-rhombus-pattern)                                                                                                                  |
-| 22  | [Hollow Rhombus Pattern.](#22-hollow-rhombus-pattern)                                                                                                                |
-| 23  | [Diamond Pattern.](#23-diamond-pattern)                                                                                                                              |
-| 24  | [Number Pyramid.](#24-number-pyramid)                                                                                                                                |
-| 25  | [Palindromic Pattern.](#25-palindromic-pattern)                                                                                                                      |
-| 26  | [Largest Number in Array.](#26-largest-number-in-array)                                                                                                              |
-| 27  | [Min and Max In Array.](#27-min-and-max-in-array)                                                                                                                    |
-| 28  | [Reverse Array.](#28-reverse-array)                                                                                                                                  |
-| 29  | [Reverse Array in Same Array.](#29-reverse-array-in-same-array)                                                                                                      |
-| 30  | [Generates all possible pairs of elements in an array.](#30-generates-all-possible-pairs-of-elements-in-an-array)                                                    |
-| 31  | [Print Sub Array.](#31-print-sub-array)                                                                                                                              |
-| 32  | [Print Sum of Sub Array.](#32-print-sum-of-sub-array)                                                                                                                |
-| 33  | [Max Sub Array Sum.](#33-max-sub-array-sum)                                                                                                                          |
-| 34  | [Max Sub Array.](#34-max-sub-array)                                                                                                                                  |
-| 35  | [10, Kadans Algorithm.](#35-10,-kadans-algorithm)                                                                                                                    |
-| 36  | [Traping RainWater.](#36-traping-rainwater)                                                                                                                          |
-| 37  | [Buy And Sell Stocks.](#37-buy-and-sell-stocks)                                                                                                                      |
-| 38  | [Bubble Sort](#38-bubble-sor)                                                                                                                                        |
-| 39  | [Selection Sort.](#39-selection-sort)                                                                                                                                |
-| 40  | [Insertion Sort.](#40-insertion-sort)                                                                                                                                |
-| 41  | [Counting Sort.](#41-counting-sort)                                                                                                                                  |
-| 42  | [Find Longest word in string.](#42-find-longest-word-in-string)                                                                                                      |
-| 43  | [hastagGenerator](#43-hastaggenerato)                                                                                                                                |
-| 44  | [Count Charecter](#44-count-charecte)                                                                                                                                |
-| 45  | [check isPalindrom](#45-check-ispalindro)                                                                                                                            |
-| 46  | [Second Largest Number in Array.](#46-second-largest-number-in-array)                                                                                                |
-| 47  | [Calculate Average of Array;](#47-calculate-average-of-array)                                                                                                        |
-| 48  | [is Array are Equal.](#48-is-array-are-equal)                                                                                                                        |
-| 49  | [sum of digits.](#49-sum-of-digits)                                                                                                                                  |
-| 50  | [Remove Duplicate from array.](#50-remove-duplicate-from-array)                                                                                                      |
-| 51  | [count vovel in string](#51-count-vovel-in-strin)                                                                                                                    |
-| 52  | [find min value in array.](#52-find-min-value-in-array)                                                                                                              |
-| 53  | [check is Power of two.](#53-check-is-power-of-two)                                                                                                                  |
-| 54  | [Change string into camel Case.](#54-change-string-into-camel-case)                                                                                                  |
-| 55  | [Check char is UpperCase.](#55-check-char-is-uppercase)                                                                                                              |
-| 56  | [match startwith char.](#56-match-startwith-char)                                                                                                                    |
-| 57  | [Revers the string.](#57-revers-the-string)                                                                                                                          |
-| 58  | [reapeat String.](#58-reapeat-string)                                                                                                                                |
-| 59  | [truncate string.](#59-truncate-string)                                                                                                                              |
-| 60  | [find median value.](#60-find-median-value)                                                                                                                          |
-| 61  | [Count Accurence element in array.](#61-count-accurence-element-in-array)                                                                                            |
-| 62  | [find mode in array.](#62-find-mode-in-array)                                                                                                                        |
-| 63  | [add item in end of array.](#63-add-item-in-end-of-array)                                                                                                            |
-| 64  | [add item in start of array.](#64-add-item-in-start-of-array)                                                                                                        |
-| 65  | [number range.](#65-number-range)                                                                                                                                    |
-| 66  | [delete last element.](#66-delete-last-element)                                                                                                                      |
-| 67  | [delete first element.](#67-delete-first-element)                                                                                                                    |
-| 68  | [number Range Recursive.](#68-number-range-recursive)                                                                                                                |
-| 69  | [Password Validation.](#69-password-validation)                                                                                                                      |
-| 70  | [Fibonacci](#70-fibonacc)                                                                                                                                            |
-| 71  | [Find sum and average of array element.](#71-find-sum-and-average-of-array-element)                                                                                  |
-| 72  | [binary to Decimal.](#72-binary-to-decimal)                                                                                                                          |
-| 73  | [Calculate days between dates.](#73-calculate-days-between-dates)                                                                                                    |
-| 74  | [Calculate Age.](#74-calculate-age)                                                                                                                                  |
-| 75  | [reapeat String.](#75-reapeat-string)                                                                                                                                |
-| 76  | [truncate string.](#76-truncate-string)                                                                                                                              |
-| 77  | [random color hex code.](#77-random-color-hex-code)                                                                                                                  |
-| 78  | [generate bar chart.](#78-generate-bar-chart)                                                                                                                        |
-
-<!-- TOC END -->
-
-### 1. Check if A Number if prime or not.
+### 1. reverse string.
 
 ```js
-    function isPrime(num) {
-        if (num <= 1) return false;
-        if (num === 2 || num === 3) return true; 
+function reverseStr() {
+  let str = "Vinod";
+  let reversedStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedStr += str[i];
+  }
+  return reversedStr;
+}
 
-        const sqrt = Math.sqrt(num);
+console.log(reverseStr());
+```
 
-        for (let i = 2; i <= sqrt; i++) {
-            if (num % i === 0) {
-            return false;
-            }
-        }
+### 2. Check palindrome.
 
-        return true;
+for Number
+
+```js
+function isNumberPalindrome(num) {
+  if (num < 0) return false; // Negative numbers can't be palindromes
+  let reversed = 0;
+  let original = num;
+
+  while (num > 0) {
+    reversed = reversed * 10 + (num % 10);
+    num = Math.floor(num / 10);
+  }
+
+  return reversed === original;
+}
+
+// Test cases
+console.log(isNumberPalindrome(121)); // true
+console.log(isNumberPalindrome(123)); // false
+console.log(isNumberPalindrome(1331)); // true
+console.log(isNumberPalindrome(-121)); // false
+```
+
+for String
+
+```js
+function isPalindrom(str) {
+  let left = 0;
+  let right = str.length - 1;
+  while (left < right) {
+    if (str[left] !== str[right]) {
+      return false;
     }
 
-    const num = 29;
+    left++;
+    right--;
+  }
 
-    if (isPrime(num)) {
-        console.log(`${num} is a prime number.`);
+  return true;
+}
+
+console.log(isPalindrom("racecar"));
+```
+
+### 3. count vovel in string
+
+**Count Vovel**
+
+```js
+function countVovel() {
+  let str = "Hello, World!";
+  str.toLowerCase;
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (
+      str[i] == "a" ||
+      str[i] == "e" ||
+      str[i] == "i" ||
+      str[i] == "o" ||
+      str[i] == "u"
+    ) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countVovel());
+```
+
+**Return Vovel**
+
+```js
+function returnVovel() {
+  let str = "Hello, World!";
+  let varr = ["a", "e", "i", "o", "u"];
+  str.toLowerCase;
+  let vovel = str.split("").filter((value) => varr.includes(value));
+  return vovel;
+}
+
+console.log(returnVovel());
+
+// [ 'e', 'o', 'o' ]
+```
+
+** How many times vovel appears**
+
+```js
+function returnVovel() {
+  let str = "Hello, World!";
+  let varr = ["a", "e", "i", "o", "u"];
+  let vowelCount = {
+    a: 0,
+    e: 0,
+    i: 0,
+    o: 0,
+    u: 0,
+  };
+
+  // Convert to lowercase (you missed the parentheses)
+  str = str.toLowerCase();
+
+  let vovel = str.split("").filter((value) => varr.includes(value));
+
+  // Use reduce to count vowels and calculate total
+  const total = vovel.reduce((acc, v) => {
+    vowelCount[v] += 1;
+    return acc + 1;
+  }, 0);
+
+  return { vowelCount, total };
+}
+
+console.log(returnVovel());
+```
+
+### 4. Write a program to find the factorial of any number entered by the user.
+
+```js
+function factorial(num) {
+  if (num < 0) return "Undefined (Negative!)";
+  if (num == 0 || num == 1) return 1;
+
+  return num * factorial(num - 1);
+}
+
+console.log(factorial(5));
+```
+
+### 5. Check if A Number if prime or not.
+
+```js
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num === 2 || num === 3) return true;
+
+  const sqrt = Math.sqrt(num);
+
+  for (let i = 2; i <= sqrt; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+const num = 29;
+
+if (isPrime(num)) {
+  console.log(`${num} is a prime number.`);
+} else {
+  console.log(`${num} is not a prime number.`);
+}
+```
+
+### 6. find smallest, secondSmallest, largest and secondLargest number in array.
+
+```js
+  function findStats(arr) {
+    if (arr.length < 2) return "Array too small";
+
+    let min = Infinity, secondMin = Infinity;
+    let max = -Infinity, secondMax = -Infinity;
+
+    for (const num of arr) {
+        // Update max and secondMax
+        if (num > max) {
+            secondMax = max;
+            max = num;
+        } else if (num > secondMax && num !== max) {
+            secondMax = num;
+        }
+
+        // Update min and secondMin
+        if (num < min) {
+            secondMin = min;
+            min = num;
+        } else if (num < secondMin && num !== min) {
+            secondMin = num;
+        }
+    }
+
+    return {
+        smallest: min,
+        secondSmallest: secondMin === Infinity ? null : secondMin,
+        largest: max,
+        secondLargest: secondMax === -Infinity ? null : secondMax,
+    };
+}
+
+const arr = [12, 5, 7, 17, 8, 0, -1];
+console.log(findStats(arr));
+```
+
+### 7. Write a program that reads a set of integers, and then prints the sum of the even and odd integers.
+
+```js
+function sumEvenOdd(numbers) {
+  let sumEven = 0;
+  let sumOdd = 0;
+
+  for (const num of numbers) {
+    if (num % 2 === 0) {
+      sumEven += num;
     } else {
-        console.log(`${num} is not a prime number.`);
+      sumOdd += num;
     }
+  }
+
+  return { sumEven, sumOdd };
+}
+
+const inputNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const { sumEven, sumOdd } = sumEvenOdd(inputNumbers);
+
+console.log(`Sum of even integers: ${sumEven}`);
+console.log(`Sum of odd integers: ${sumOdd}`);
 ```
 
-### 2. Write a program that reads a set of integers, and then prints the sum of the even and odd integers.
+### 8. Remove Duplicate from array.
 
 ```js
-    function sumEvenOdd(numbers) {
-        let sumEven = 0;
-        let sumOdd = 0;
+function removeDuplicates(arr) {
+  return arr.filter((value, index, self) => self.indexOf(value) === index);
+}
 
-        for (const num of numbers) {
-            if (num % 2 === 0) {
-                sumEven += num;
-            } else {
-                sumOdd += num;
-            }
+const numbers = [1, 2, 3, 2, 4, 5, 4, 6, 7, 5];
+const uniqueNumbers = removeDuplicates(numbers);
 
-        }
-
-        return { sumEven, sumOdd };
-    }
-
-    const inputNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-    const { sumEven, sumOdd } = sumEvenOdd(inputNumbers);
-
-    console.log(`Sum of even integers: ${sumEven}`);
-    console.log(`Sum of odd integers: ${sumOdd}`);
-
-```
-
-### 3. Write a program to find the factorial of any number entered by the user.
-
-```java
-    import java.util.Scanner;
-
-    public class Factorial {
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-
-            int num;
-            int fact=1;
-
-            System.out.println("Enter any positive integer");
-            num = sc.nextInt();
-
-            for(int i=1; i<=num; i++){
-                fact*=i;
-            }
-
-            System.out.println("Factorial: " + fact);
-            sc.close();
-        }
-    }
-
+console.log(uniqueNumbers);
+// Output: [1, 2, 3, 4, 5, 6, 7]
 ```
 
 ```js
-    function factorial(n) {
-        if (n === 0 || n === 1) {
-            return 1;
-        }
+function removeDuplicates(arr) {
+  let uniq = new Set(arr);
+  return [...uniq];
+}
 
-        return n * factorial(n - 1);
-    }
+const numbers = [1, 2, 3, 2, 4, 5, 4, 6, 7, 5];
+const uniqueNumbers = removeDuplicates(numbers);
 
-    const number = 5;
-    const result = factorial(number);
-    console.log(`The factorial of ${number} is ${result}`);
+console.log(uniqueNumbers);
+// Output: [1, 2, 3, 4, 5, 6, 7]
 ```
 
-### 4. Write a program to print the multiplication table of a number N, entered by the user.
+### 9. Write a program to print the multiplication table of a number N, entered by the user.
 
 ```js
-    function printMultiplicationTable(N) {
-        console.log(`Multiplication Table for ${N}:`);
-        for (let i = 1; i <= 10; i++) {
-            console.log(`${N} x ${i} = ${N * i}`);
+function printMultiplicationTable(N) {
+  console.log(`Multiplication Table for ${N}:`);
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${N} x ${i} = ${N * i}`);
+  }
+}
+
+const number = parseInt(prompt("Enter a number: "), 10);
+
+if (!isNaN(number)) {
+  printMultiplicationTable(number);
+} else {
+  console.log("Please enter a valid number.");
+}
+```
+
+### 10. Swap Number without using third variable.
+
+```js
+function swap() {
+  let a = 10,
+    b = 20;
+  console.log(`Before swapping: a = ${a}, b = ${b}`);
+
+  a = a + b;
+  b = a - b;
+  a = a - b;
+
+  console.log(`After swapping: a = ${a}, b = ${b}`);
+}
+
+swap();
+```
+
+### 11.  Check if two strings are anagrams.
+
+```js
+  function areAnagrams(str1, str2) {
+  if (str1.length !== str2.length) return false;
+
+  const charCount = {};
+
+  for (let i = 0; i < str1.length; i++) {
+    const char = str1[i];
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  for (let i = 0; i < str2.length; i++) {
+    const char = str2[i];
+    if (!charCount[char]) return false;
+    charCount[char]--;
+  }
+
+  return true;
+}
+
+// Example usage
+console.log(areAnagrams("listen", "silent")); // true
+console.log(areAnagrams("hello", "world"));   // false
+```
+
+### 12. Merge two sorted arrays into a single sorted array.
+
+```js
+  function mergeSortedArrays(arr1, arr2){
+    let i = 0;
+    let j = 0;
+    let mergedArray = [];
+    
+    while(i < arr1[i] && j < arr2[j]){
+        if(arr1[i] < arr2[j]){
+            mergedArray.push(arr1[i]);
+            i++;
+        } else {
+            mergedArray.push(arr2[j]);
+            j++
         }
     }
+    
+      // Add remaining elements from arr1 (if any)
+  while (i < arr1.length) {
+    mergedArray.push(arr1[i]);
+    i++;
+  }
 
-    const number = parseInt(prompt("Enter a number: "), 10);
+  // Add remaining elements from arr2 (if any)
+  while (j < arr2.length) {
+    mergedArray.push(arr2[j]);
+    j++;
+  }
+    
+    return mergedArray;
+}
 
+console.log(mergeSortedArrays([], [1, 2, 3]));  // [1, 2, 3]
+```
 
-    if (!isNaN(number)) {
-        printMultiplicationTable(number);
+### 13. Find the missing number in an array (e.g., [1, 2, 4, 5] → 3).
+
+```js
+  function findMissingNumber(arr) {
+  let n = arr.length + 1; 
+  let expectedSum = (n * (n + 1)) / 2;
+  let actualSum = arr.reduce((sum, num) => sum + num, 0);
+  return expectedSum - actualSum;
+}
+
+console.log(findMissingNumber([1, 2, 4, 5]));  // आउटपुट: 3
+console.log(findMissingNumber([1, 3, 4, 5, 6]));  // आउटपुट: 2
+console.log(findMissingNumber([2, 3, 4, 5]));  // आउटपुट: 1
+
+```
+
+### 14.  Find the first non-repeating character in a string.
+
+```js
+function firstNonRepeatingChar(str){
+    let charCount = {};
+    
+    for(let char of str){
+        charCount[char] = (charCount[char] || 0) + 1;
+    }
+    
+    for(let char of str){
+        if(charCount[char] === 1){
+            return char;
+        }
+    }
+    return null
+}
+
+console.log(firstNonRepeatingChar("swiss"));   // 'w'
+```
+
+### 15. Find all pairs in an array that sum up to a given number.
+
+```js
+  function findPairs(arr, target) {
+  let pairs = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        pairs.push([arr[i], arr[j]]);
+      }
+    }
+  }
+
+  return pairs;
+}
+
+console.log(findPairs([1, 2, 3, 4, 5, 6], 7));
+// Output: [ [ 1, 6 ], [ 2, 5 ], [ 3, 4 ] ]
+
+```
+
+```js
+  function findPairsOptimized(arr, target) {
+  let seen = new Set();
+  let result = [];
+
+  for (let num of arr) {
+    let complement = target - num;
+    if (seen.has(complement)) {
+      result.push([complement, num]);
+    }
+    seen.add(num);
+  }
+
+  return result;
+}
+
+console.log(findPairsOptimized([1, 2, 3, 4, 5, 6], 7));
+// Output: [ [ 1, 6 ], [ 2, 5 ], [ 3, 4 ] ]
+
+```
+
+### 16 flate nested Array.
+
+```js
+function flattenArray(arr) {
+  let result = [];
+
+  for (let item of arr) {
+    if (Array.isArray(item)) {
+      result = result.concat(flattenArray(item)); // recursive call
     } else {
-        console.log("Please enter a valid number.");
+      result.push(item);
     }
+  }
+
+  return result;
+}
+
+console.log(flattenArray([1, [2, [3, 4], 5]]));
+// Output: [1, 2, 3, 4, 5]
 
 ```
 
-### 5. Swap Number without using third variable.
+### 17. Group anagrams together from an array of words.
 
 ```js
-    function swap() {
-        let a = 10, b = 20;
-        console.log(`Before swapping: a = ${a}, b = ${b}`);
+  function groupAnagrams(words) {
+  const map = new Map();
 
-        a = a + b;
-        b = a - b;
-        a = a - b;
-
-        console.log(`After swapping: a = ${a}, b = ${b}`);
+  for (let word of words) {
+    const sorted = word.split('').sort().join('');
+    if (!map.has(sorted)) {
+      map.set(sorted, []);
     }
+    map.get(sorted).push(word);
+  }
 
-    swap();
+  return Array.from(map.values());
+}
+
+// Example usage:
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+
 ```
+
+### 18. Convert a given number into words.
+
+```js
+
+function numberToWords(num){
+  if(num === 0) return "Zero";
+  
+   const belowTwenty = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
+                       "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen",
+                       "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+
+  const tens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+
+  const thousands = ["", "Thousand", "Million", "Billion"];
+  
+  function helper(n){
+    if (n === 0) return "";
+    else if (n < 20) return belowTwenty[n] + " ";
+    else if (n < 100) return tens[Math.floor(n / 10)] + " " + helper(n % 10);
+    else return belowTwenty[Math.floor(n / 100)] + " Hundred " + helper(n % 100);
+  }
+  
+  let res = "";
+  let i = 0;
+  
+  while(num > 0){
+    if(num % 1000 !==0){
+      res = helper(num % 1000) + thousands[i] + " " + res;
+    }
+    num = Math.floor(num / 1000)
+    i++;
+  }
+  return res.trim()
+}
+
+console.log(numberToWords(1005));
+```
+
+
+### 19. Deep clone an object without using JSON.stringify.
+
+```js
+  
+function deepClone(obj){
+  if(obj === null || typeof obj !== "object"){
+    return obj;
+  }
+  
+    if (Array.isArray(obj)) {
+    return obj.map(item => deepClone(item));
+  }
+  
+  const clonedObj = {};
+  
+  for(let key in obj){
+    if (obj.hasOwnProperty(key)) {
+      clonedObj[key] = deepClone(obj[key]);
+    }
+  }
+  
+  return clonedObj
+}
+
+
+
+const original = {
+  name: "Vinod",
+  age: 25,
+  skills: ["JS", "React"],
+  address: {
+    city: "Bilaspur",
+    pin: 495001
+  }
+};
+
+const cloned = deepClone(original);
+
+
+
+cloned.name = "Chandra";
+cloned.skills.push("Node.js");
+cloned.address.city = "Nashik";
+
+console.log("Original:", original);
+console.log("Cloned:", cloned);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 6. Prime Number in Range.
 
 ```js
-    function isPrime(num) {
-        if (num <= 1) return false;
-        if (num === 2 || num === 3) return true;
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num === 2 || num === 3) return true;
 
-        const sqrt = Math.sqrt(num);
-        for (let i = 2; i <= sqrt; i++) {
-            if (num % i === 0) {
-            return false;
-            }
-        }
-        return true;
+  const sqrt = Math.sqrt(num);
+  for (let i = 2; i <= sqrt; i++) {
+    if (num % i === 0) {
+      return false;
     }
+  }
+  return true;
+}
 
-    function primeInRange(start, end) {
-        console.log(`Prime numbers between ${start} and ${end}:`);
-        for (let num = start; num <= end; num++) {
-            if (isPrime(num)) {
-            console.log(num);
-            }
-        }
+function primeInRange(start, end) {
+  console.log(`Prime numbers between ${start} and ${end}:`);
+  for (let num = start; num <= end; num++) {
+    if (isPrime(num)) {
+      console.log(num);
     }
+  }
+}
 
-    const startRange = 10;
-    const endRange = 50;
+const startRange = 10;
+const endRange = 50;
 
-    primeInRange(startRange, endRange);
-
+primeInRange(startRange, endRange);
 ```
 
 ### 7. Binary to Decimal.
 
 ```js
-    function binaryToDecimal(n) {
-        let ans = 0;
-        let i = 0;
+function binaryToDecimal(n) {
+  let ans = 0;
+  let i = 0;
 
-        while (n > 0) {
-            const bit = n % 10;
-            ans += bit * Math.pow(2, i); 
-            n = Math.floor(n / 10);
-            i++;
-        }
+  while (n > 0) {
+    const bit = n % 10;
+    ans += bit * Math.pow(2, i);
+    n = Math.floor(n / 10);
+    i++;
+  }
 
-        return ans;
-    }
+  return ans;
+}
 
-    const binaryNumber = 111;
-    const decimalValue = binaryToDecimal(binaryNumber);
-    console.log(decimalValue);
+const binaryNumber = 111;
+const decimalValue = binaryToDecimal(binaryNumber);
+console.log(decimalValue);
 ```
 
 ### 8. Decimal to Binary.
@@ -289,31 +664,6 @@
         }
     }
 
-```
-
-### 9. Check if number is palindrome.
-
-```java
-    public class Palindrome {
-        public static boolean isPalindrome(int num){
-            int reverse = 0, temp = num;
-            while(num > 0){
-                reverse = reverse * 10 + num % 10;
-                num = num / 10;
-                }
-                return reverse == temp;
-
-        }
-        public static void main(String[] args) {
-            int num = 121;
-            boolean result = isPalindrome(num);
-            if(result){
-                System.out.println("The number is a palindrome");
-            } else {
-                System.out.println("The number is not a palindrome");
-            }
-        }
-    }
 ```
 
 ### 10. Triengle Pattern.
@@ -841,49 +1191,7 @@
 
 ```
 
-### 26. Largest Number in Array.
 
-```java
-    package Java.Array;
-
-    public class LargestNum {
-        public static void main(String[] args) {
-            int[] arr = {1, 2, 3, 4, 5};
-            int max = arr[0];
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] > max) {
-                    max = arr[i];
-                }
-            }
-            System.out.println(max);
-        }
-    }
-
-```
-
-### 27. Min and Max In Array.
-
-```java
-    package Java.Array;
-
-    public class MinMaxInArray {
-        public static void main(String[] args) {
-            int[] arr = {1, 2, 3, 4, 5};
-            int min = Integer.MAX_VALUE;
-            int max = Integer.MIN_VALUE;
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] < min) {
-                    min = arr[i];
-                }
-                if (arr[i] > max) {
-                    max = arr[i];
-                }
-            }
-            System.out.println("Min: " + min + " Max: " + max);
-        }
-    }
-
-```
 
 ### 28. Reverse Array.
 
@@ -1351,37 +1659,7 @@ const isPalindrome = (str) => {
 console.log(isPalindrome("racecar"));
 ```
 
-### 46. Second Largest Number in Array.
 
-```js
-function findSecondLargest(arr) {
-  if (arr.length < 2) {
-    return null;
-  }
-
-  let largest = -Infinity;
-  let secondLargest = -Infinity;
-
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > largest) {
-      secondLargest = largest;
-      largest = arr[i];
-    } else if (arr[i] > secondLargest && arr[i] < largest) {
-      secondLargest = arr[i];
-    }
-  }
-
-  if (secondLargest === -Infinity) {
-    return null;
-  }
-
-  return secondLargest;
-}
-
-const numbers = [10, 5, 8, 20, 15];
-const result = findSecondLargest(numbers);
-console.log(`The second largest number is ${result}`);
-```
 
 ### 47. Calculate Average of Array;
 
@@ -1457,118 +1735,7 @@ function sumOfDigits() {
 console.log(sumOfDigits());
 ```
 
-### 50. Remove Duplicate from array.
 
-```js
-function removeDuplicates(arr) {
-  return arr.filter((value, index, self) => self.indexOf(value) === index);
-}
-
-const numbers = [1, 2, 3, 2, 4, 5, 4, 6, 7, 5];
-const uniqueNumbers = removeDuplicates(numbers);
-
-console.log(uniqueNumbers);
-// Output: [1, 2, 3, 4, 5, 6, 7]
-```
-
-```js
-function removeDuplicates(arr) {
-  let uniq = new Set(arr);
-  return [...uniq];
-}
-
-const numbers = [1, 2, 3, 2, 4, 5, 4, 6, 7, 5];
-const uniqueNumbers = removeDuplicates(numbers);
-
-console.log(uniqueNumbers);
-// Output: [1, 2, 3, 4, 5, 6, 7]
-```
-
-### 51. count vovel in string
-
-**Count Vovel**
-
-```js
-function countVovel() {
-  let str = "Hello, World!";
-  str.toLowerCase;
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (
-      str[i] == "a" ||
-      str[i] == "e" ||
-      str[i] == "i" ||
-      str[i] == "o" ||
-      str[i] == "u"
-    ) {
-      count++;
-    }
-  }
-  return count;
-}
-
-console.log(countVovel());
-```
-
-**Return Vovel**
-
-```js
-function returnVovel() {
-  let str = "Hello, World!";
-  let varr = ["a", "e", "i", "o", "u"];
-  str.toLowerCase;
-  let vovel = str.split("").filter((value) => varr.includes(value));
-  return vovel;
-}
-
-console.log(returnVovel());
-
-// [ 'e', 'o', 'o' ]
-```
-
-** How many times vovel appears**
-
-```js
-function returnVovel() {
-  let str = "Hello, World!";
-  let varr = ["a", "e", "i", "o", "u"];
-  let vowelCount = {
-    a: 0,
-    e: 0,
-    i: 0,
-    o: 0,
-    u: 0,
-  };
-  str.toLowerCase;
-  let vovel = str.split("").filter((value) => varr.includes(value));
-
-  for (v of vovel) {
-    vowelCount[v] += 1;
-  }
-
-  return vowelCount;
-}
-
-console.log(returnVovel());
-```
-
-### 52. find min value in array.
-
-```js
-function findMin() {
-  const arr = [4, 12, 4, 1, -5, -2];
-  let min = Infinity;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < min) {
-      min = arr[i];
-    }
-  }
-
-  return min;
-}
-
-console.log(findMin());
-```
 
 ### 53. check is Power of two.
 
@@ -1626,21 +1793,6 @@ const startsWith = (str, substr) => {
 };
 
 console.log(startsWith("Hello world", "Hello"));
-```
-
-### 57. reverse string.
-
-```js
-function reverseStr() {
-  let str = "Vinod";
-  let reversedStr = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    reversedStr += str[i];
-  }
-  return reversedStr;
-}
-
-console.log(reverseStr());
 ```
 
 ### 58. reapeat String.
@@ -2097,97 +2249,64 @@ function displayResults(amount, fromCurrency, results) {
   }
 }
 ```
-### 80 flate nested Array.
-
-```js
-    const nArr = [
-    [1, 2, 3],
-    [
-      [4, 5, 6],
-      [7, 8, 9],
-      [
-        [10, 11],
-        [12, 13, 14],
-      ]
-    ],
-    [15, 16, 17, 18]
-];
-
-function flattenArray(arr){
-    let result = [];
-    arr.forEach((val)=>{
-        if(Array.isArray(val)){
-            result = result.concat(flattenArray(val));
-        } else {
-            result.push(val);
-        }
-    })
-    return result
-}
-
-let flatArray =  flattenArray(nArr);
 
 
-console.log(flatArray)
-```
 
 ### 81. Search Sorted Array.
 
 ```js
-  function searchSortedMatrix(matrix, target ){
-    let rows = matrix.length;
-    let cols = matrix[0].length;
+function searchSortedMatrix(matrix, target) {
+  let rows = matrix.length;
+  let cols = matrix[0].length;
 
-    // start from top right corner
+  // start from top right corner
 
+  let row = 0;
+  let col = cols - 1;
 
-    let row = 0;
-    let col = cols - 1;
-
-    while(row < rows && col >= 0){
-        if(matrix[row][col] === target) {
-            return [row, col];
-        }
-
-        else if(target < matrix[row][col]){
-            col--;
-        }
-        else{
-            row++
-        }
+  while (row < rows && col >= 0) {
+    if (matrix[row][col] === target) {
+      return [row, col];
+    } else if (target < matrix[row][col]) {
+      col--;
+    } else {
+      row++;
     }
-
+  }
 }
 
 let matrix = [
-    [1, 4, 7, 11, 15],
-    [2, 5, 8, 12, 19],
-    [3, 6, 9, 16, 22],
-    [10, 13, 14, 17, 24],
-    [18, 21, 23, 26, 30]
-  ];
-  
-  let target = 14;
-  console.log(searchSortedMatrix(matrix, target));
+  [1, 4, 7, 11, 15],
+  [2, 5, 8, 12, 19],
+  [3, 6, 9, 16, 22],
+  [10, 13, 14, 17, 24],
+  [18, 21, 23, 26, 30],
+];
+
+let target = 14;
+console.log(searchSortedMatrix(matrix, target));
 ```
 
 ### 82. Suffle Array Element
 
 ```js
-  const arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5];
 
-  function shuffle(data){
-      return data.map(function(a){
-          return {
-              value:a, 
-              random:Math.random()
-          }
-      }).sort(function(a, b){
-          return a.random - b.random;
-      }).map(function(d){
-          return d.value
-      })
-  }
+function shuffle(data) {
+  return data
+    .map(function (a) {
+      return {
+        value: a,
+        random: Math.random(),
+      };
+    })
+    .sort(function (a, b) {
+      return a.random - b.random;
+    })
+    .map(function (d) {
+      return d.value;
+    });
+}
 
-  console.log(shuffle(arr))
+console.log(shuffle(arr));
 ```

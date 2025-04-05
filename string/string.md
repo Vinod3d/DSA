@@ -80,6 +80,30 @@ const isPalindrome = (str) => {
 };
 
 console.log(isPalindrome("racecar"));
+
+
+function reverse(str){
+    let reversedStr = "";
+    for(let i= str.length -1; i>= 0; i--){
+        reversedStr += str[i];
+    }
+    return reversedStr;
+}
+
+function isPalindrom(str){
+    let strText = str;
+    let revStr = reverse(str);
+    console.log(strText, revStr)
+    
+    if(strText === revStr){
+        console.log("String is Palindrom")
+    } else {
+         console.log("String is not Palindrom")
+    }
+}
+
+isPalindrom('racecar')
+
 ```
 
 ### 5. count vovel in string

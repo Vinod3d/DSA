@@ -1887,5 +1887,123 @@ setTimeout is a macrotask and is executed after all microtasks are completed. Am
 ### 104
 
 ```js
+    function makeIce(size, money){
+    
+    }
+
+    function makeCream(flavour, color, temp=0, name){
+        
+    }
+
+    console.log(makeIce.length)
+    console.log(makeCream.length)
+```
+
+
+// 0
+// 0
+
+length property of function prints the length of arguments a function is expecting. and if there is any optional argument, then all argument after than will be considered option, not matter if we declare them optional or not.
+
+with that said, it is always a good practice to include optional arguments in the last.
+
+
+### 105
+
+```js
+    class Test {
+        constructor(name) {
+            this.name = 'John';
+        }
+
+        static showName(){
+            console.log(this);
+        }
+    }
+
+
+    Test.showName();
+```
+
+    <!-- class Test {
+        constructor(name) {
+            this.name = 'John';
+        }
+
+        static showName(){
+            console.log(this);
+        }
+    }
+
+
+    Test.showName(); -->
+
+
+    The value of this inside a static function is class itself.
+
+    when we log this inside static method whole class will be logged.
+
+
+### 106
+
+```js
+    const obj = {1: 'random'};
+    const set = new Set([1, 2, 3, 4]);
+
+    console.log(obj.hasOwnProperty(1));
+    console.log(obj.hasOwnProperty('1'))
+    console.log(set.has(1));
+    console.log(set.has('1'))
+```
+
+output : -
+
+<!-- true
+true
+true
+false -->
+
+
+### 107
+
+```js
+    const obj = {
+    lang: 'React',
+    showLang : ()=> {
+        console.log(this.lang);
+    }
+}
+
+function show(){
+    this.lang = 'Vue';
+    this.showLang = ()=>{
+        console.log(this.lang);
+    }
+}
+
+console.log(obj.showLang()); // undefined
+const x = new show();
+x.showLang();          // Vue
 
 ```
+
+showLang एक Arrow Function है।
+
+Arrow Functions का this object से नहीं, बल्कि outer scope से आता है।
+Global Scope में lang नाम की कोई property नहीं है, इसलिए undefined प्रिंट होगा।
+
+
+जब हम new show() लिखते हैं, तो क्या होता है?
+एक नया object {} बनता है।
+
+this.lang = 'Vue';
+
+अब this इस नए object को refer कर रहा है, जिसमें lang: 'Vue' सेट हो जाता है।
+
+this.showLang = ()=>{ console.log(this.lang); }
+
+अब showLang() function भी इसी object का हिस्सा बन जाता है।
+
+अब x.showLang(); को कॉल करेंगे
+
+this.lang अब 'Vue' है, तो output 'Vue' होगा।
